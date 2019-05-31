@@ -39,20 +39,22 @@ class Student extends Person{
     }
 
     listsSubjects(){
-        console.log(this.favSubject);
+        this.favSubject.forEach(function(favSubject){
+            console.log(favSubject);
+        })
     }
 
     PRAssignment(subject){
-        console.log(`${student.name} has submitted a PR for ${subject}.`)
+        console.log(`${this.name} has submitted a PR for ${subject}.`)
     }
 
     sprintChallenge(subject){
-        console.log(`${student.name} has begun sprint challenge on ${subject}.`)
+        console.log(`${this.name} has begun sprint challenge on ${subject}.`)
     }
 }
 
-class ProjectManagers extends Instructor{
-    contructor(attributes){
+class ProjectManager extends Instructor{
+    constructor(attributes){
         super(attributes);
         this.gradClassName = attributes.gradClassName;
         this.favInstructor = attributes.favInstructor;
@@ -93,7 +95,7 @@ const ray = new Student({
     location: 'Massachusetts',
     previousBackground: 'Finance',
     className: 'WebPt7',
-    favSubject: [Html, CSS, Javascript]
+    favSubject: [`Html`, `CSS`, `Javascript`]
 })
 
 const julie = new Student({
@@ -102,7 +104,7 @@ const julie = new Student({
     location: 'Rhode Island',
     previousBackground: 'Design',
     className: 'WebPt7',
-    favSubject: [Html, CSS, Javascript]
+    favSubject: [`Html`, `CSS`, `Javascript`]
 })
 
 const todd = new ProjectManager({
