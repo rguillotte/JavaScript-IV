@@ -66,3 +66,57 @@ class ProjectManagers extends Instructor{
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
     }
 }
+
+//Creating new instances of each class below
+
+const dan = new Instructor({
+    name: 'Dan',
+    age: 25,
+    location: 'California',
+    specialty: 'Front-end',
+    favLanguage: 'Javascript',
+    catchPhrase: `Don't forget the homies`
+});
+
+const josh = new Instructor({
+    name: 'Josh',
+    age: 28,
+    location: 'Utah',
+    specialty: 'Back-end',
+    favLanguage: 'Javascript',
+    catchPhrase: `Tubular`
+})
+
+const ray = new Student({
+    name: 'Ray',
+    age: 26,
+    location: 'Massachusetts',
+    previousBackground: 'Finance',
+    className: 'WebPt7',
+    favSubject: [Html, CSS, Javascript]
+})
+
+const julie = new Student({
+    name: 'Julie',
+    age: 28,
+    location: 'Rhode Island',
+    previousBackground: 'Design',
+    className: 'WebPt7',
+    favSubject: [Html, CSS, Javascript]
+})
+
+const todd = new ProjectManager({
+    name: 'Todd',
+    age: 30,
+    location: 'Washington',
+    gradClassName: 'Web6',
+    favInstructor: 'Josh'
+})
+
+const gabrielle = new ProjectManager({
+    name: 'Gabrielle',
+    age: 24,
+    location: 'Colorado',
+    gradClassName: 'Web8',
+    favInstructor: 'Dan'
+})
